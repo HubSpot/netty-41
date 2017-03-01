@@ -13,7 +13,7 @@
   <version>1.0-SNAPSHOT</version>
 
   <properties>
-    <skip.dependency.analysis>true</skip.dependency.analysis>
+    <basepom.check.skip-dependency-management>true</basepom.check.skip-dependency-management>
     <hubspot.netty4.version>4.1.5.Final</hubspot.netty4.version>
     <hubspot.pom.path>${project.build.directory}/${project.artifactId}-${project.version}.pom</hubspot.pom.path>
   </properties>
