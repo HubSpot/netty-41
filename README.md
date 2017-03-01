@@ -8,9 +8,10 @@ Maven:
 
 ```xml
     <dependency>
-      <groupId>io.netty</groupId>
+      <groupId>com.hubspot</groupId>
       <artifactId>netty-all-41</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>4.1.8</version>
+      <classifier>shaded</classifier>
     </dependency>
 ```
 
@@ -24,7 +25,7 @@ System.setProperty("nettyfourone.io.netty.packagePrefix", "nettyfourone");
 Imports
 
 ```java
-import netty41.io.netty.....;
+import nettyfourone.io.netty.....;
 ```
 
 ## Changing version
