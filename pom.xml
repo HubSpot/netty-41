@@ -55,20 +55,21 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>2.4.2</version>
         <executions>
           <execution>
             <goals>
               <goal>shade</goal>
             </goals>
             <phase>package</phase>
-            <configuration>
+            <configuration combine.self="override">
               <createDependencyReducedPom>true</createDependencyReducedPom>
               <createSourcesJar>true</createSourcesJar>
+              <outputFile/>
               <shadeSourcesContent>true</shadeSourcesContent>
               <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
               <dependencyReducedPomLocation>${hubspot.pom.path}</dependencyReducedPomLocation>
               <useBaseVersion>true</useBaseVersion>
+              <shadedArtifactAttached>true</shadedArtifactAttached>
               <artifactSet>
                 <includes>
                   <include>io.netty:netty-all</include>
