@@ -10,11 +10,11 @@
 
   <groupId>io.netty</groupId>
   <artifactId>netty-all-41</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>4.1.8-SNAPSHOT</version>
 
   <properties>
     <basepom.check.skip-dependency-management>true</basepom.check.skip-dependency-management>
-    <hubspot.netty4.version>4.1.5.Final</hubspot.netty4.version>
+    <hubspot.netty41.version>4.1.8.Final</hubspot.netty41.version>
     <hubspot.pom.path>${project.build.directory}/${project.artifactId}-${project.version}.pom</hubspot.pom.path>
   </properties>
 
@@ -23,7 +23,7 @@
       <dependency>
         <groupId>io.netty</groupId>
         <artifactId>netty-all</artifactId>
-        <version>${hubspot.netty4.version}</version>
+        <version>${hubspot.netty41.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

@@ -3,13 +3,16 @@ cd $(dirname "$0")
 
 set -e
 
-VERSION=$(grep netty4.version pom.xml | perl -lne 'print $1 if (/>(.+?)<\//);')
+VERSION=$(grep netty41.version pom.xml | perl -lne 'print $1 if (/>(.+?)<\//);' | head -n 1)
 
 SOURCE_JAR="$HOME/.m2/repository/io/netty/netty-all/$VERSION/netty-all-$VERSION.jar"
+
+echo "Trying to load source jar: $SOURCE_JAR"
 
 if [[ ! -r $SOURCE_JAR ]]; then
     echo "Running mvn compile to force a download of netty."
     mvn compile &> /dev/null
+    mvn dependency:sources &>/dev/null
 fi
 
 if [[ ! -r $SOURCE_JAR ]]; then
