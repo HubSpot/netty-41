@@ -8,9 +8,23 @@
     <version>15.8</version>
   </parent>
 
-  <groupId>io.netty</groupId>
+  <groupId>com.hubspot</groupId>
   <artifactId>netty-all-41</artifactId>
   <version>4.1.8-SNAPSHOT</version>
+
+  <scm>
+    <connection>scm:git:git@github.com:HubSpot/netty-41.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/HubSpot/netty-41.git</developerConnection>
+    <url>git@github.com:HubSpot/netty-41.git</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <developers>
+    <developer>
+      <name>Michael Axiak</name>
+      <email>maxiak@hubspot.com</email>
+    </developer>
+  </developers>
 
   <properties>
     <basepom.check.skip-dependency>true</basepom.check.skip-dependency>
@@ -64,7 +78,7 @@
             <configuration combine.self="override">
               <createDependencyReducedPom>true</createDependencyReducedPom>
               <createSourcesJar>true</createSourcesJar>
-              <outputFile/>
+              <outputFile />
               <shadeSourcesContent>true</shadeSourcesContent>
               <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
               <dependencyReducedPomLocation>${hubspot.pom.path}</dependencyReducedPomLocation>
