@@ -10,7 +10,7 @@
 
   <groupId>com.hubspot</groupId>
   <artifactId>netty-all-41</artifactId>
-  <version>4.1.9-SNAPSHOT</version>
+  <version>4.1.8-SNAPSHOT</version>
 
   <scm>
     <connection>scm:git:git@github.com:HubSpot/netty-41.git</connection>
