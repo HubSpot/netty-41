@@ -22,10 +22,10 @@ fi
 
 cd src/main/resources/META-INF/native
 unzip $SOURCE_JAR \
-      META-INF/native/libnetty-transport-native-epoll.so
+      META-INF/native/libnetty_transport_native_epoll_x86_64.so
 
-mv -v ./META-INF/native/libnetty-transport-native-epoll.so \
-      ./libnettyfouronenetty-transport-native-epoll.so
+mv -v ./META-INF/native/libnetty_transport_native_epoll_x86_64.so \
+      ./libnettyfourone_transport_native_epoll_x86_64.so
 
 rm -rf ./META-INF
 
