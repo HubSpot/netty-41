@@ -27,7 +27,6 @@
   </developers>
 
   <properties>
-    <basepom.check.skip-findbugs>true</basepom.check.skip-findbugs>
     <basepom.check.skip-dependency>true</basepom.check.skip-dependency>
     <hubspot.netty41.version>4.1.30.Final</hubspot.netty41.version>
     <hubspot.pom.path>${project.build.directory}/${project.artifactId}-${project.version}.pom</hubspot.pom.path>
@@ -52,6 +51,15 @@
 
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>none</phase>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-deploy-plugin</artifactId>
