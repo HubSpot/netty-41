@@ -25,7 +25,7 @@ unzip $SOURCE_JAR \
       META-INF/native/libnetty_transport_native_epoll_x86_64.so
 
 mv -v ./META-INF/native/libnetty_transport_native_epoll_x86_64.so \
-      ./libnettyfourone_transport_native_epoll_x86_64.so
+      ./libnettyfourone_netty_transport_native_epoll_x86_64.so
 
 rm -rf ./META-INF
 
