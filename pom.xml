@@ -13,7 +13,6 @@
 
   <properties>
     <basepom.check.skip-dependency>true</basepom.check.skip-dependency>
-    <basepom.check.skip-findbugs>true</basepom.check.skip-findbugs>
     <hubspot.netty41.version>4.1.68.Final</hubspot.netty41.version>
     <hubspot.pom.path>${project.build.directory}/${project.artifactId}-${project.version}.pom</hubspot.pom.path>
   </properties>
