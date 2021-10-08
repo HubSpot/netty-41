@@ -5,12 +5,11 @@
   <parent>
     <groupId>com.hubspot</groupId>
     <artifactId>basepom</artifactId>
-    <version>15.8</version>
+    <version>25.6</version>
   </parent>
 
-  <groupId>com.hubspot</groupId>
   <artifactId>netty-all-41</artifactId>
-  <version>4.1.38-SNAPSHOT</version>
+  <version>4.1.68-SNAPSHOT</version>
 
   <scm>
     <connection>scm:git:git@github.com:HubSpot/netty-41.git</connection>
@@ -28,7 +27,8 @@
 
   <properties>
     <basepom.check.skip-dependency>true</basepom.check.skip-dependency>
-    <hubspot.netty41.version>4.1.38.Final</hubspot.netty41.version>
+    <basepom.check.skip-findbugs>true</basepom.check.skip-findbugs>
+    <hubspot.netty41.version>4.1.68.Final</hubspot.netty41.version>
     <hubspot.pom.path>${project.build.directory}/${project.artifactId}-${project.version}.pom</hubspot.pom.path>
   </properties>
 
@@ -51,15 +51,6 @@
 
   <build>
     <plugins>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>findbugs-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>none</phase>
-          </execution>
-        </executions>
-      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-deploy-plugin</artifactId>
@@ -105,7 +96,6 @@
                     <exclude>META-INF/*.SF</exclude>
                     <exclude>META-INF/*.DSA</exclude>
                     <exclude>META-INF/*.RSA</exclude>
-                    <exclude>META-INF/native/libnetty-transport-native-epoll.so</exclude>
                   </excludes>
                 </filter>
               </filters>
@@ -113,6 +103,36 @@
                 <relocation>
                   <pattern>io.netty.</pattern>
                   <shadedPattern>nettyfourone.io.netty.</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>META-INF/native/libnetty_transport_native_epoll_x86_64.so</pattern>
+                  <shadedPattern>META-INF/native/libnettyfourone_netty_transport_native_epoll_x86_64.so</shadedPattern>
+                  <rawString>true</rawString>
+                </relocation>
+                <relocation>
+                  <pattern>META-INF/native/libnetty_transport_native_epoll_aarch_64.so</pattern>
+                  <shadedPattern>META-INF/native/libnettyfourone_netty_transport_native_epoll_aarch_64.so</shadedPattern>
+                  <rawString>true</rawString>
+                </relocation>
+                <relocation>
+                  <pattern>META-INF/native/libnetty_resolver_dns_native_macos_aarch_64.jnilib</pattern>
+                  <shadedPattern>META-INF/native/libnettyfourone_netty_resolver_dns_native_macos_aarch_64.jnilib</shadedPattern>
+                  <rawString>true</rawString>
+                </relocation>
+                <relocation>
+                  <pattern>META-INF/native/libnetty_resolver_dns_native_macos_x86_64.jnilib</pattern>
+                  <shadedPattern>META-INF/native/libnettyfourone_netty_resolver_dns_native_macos_x86_64.jnilib</shadedPattern>
+                  <rawString>true</rawString>
+                </relocation>
+                <relocation>
+                  <pattern>META-INF/native/libnetty_transport_native_kqueue_aarch_64.jnilib</pattern>
+                  <shadedPattern>META-INF/native/libnettyfourone_netty_transport_native_kqueue_aarch_64.jnilib</shadedPattern>
+                  <rawString>true</rawString>
+                </relocation>
+                <relocation>
+                  <pattern>META-INF/native/libnetty_transport_native_kqueue_x86_64.jnilib</pattern>
+                  <shadedPattern>META-INF/native/libnettyfourone_netty_transport_native_kqueue_x86_64.jnilib</shadedPattern>
+                  <rawString>true</rawString>
                 </relocation>
               </relocations>
             </configuration>
