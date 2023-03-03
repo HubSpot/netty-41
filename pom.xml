@@ -9,11 +9,11 @@
   </parent>
 
   <artifactId>netty-all-41</artifactId>
-  <version>4.1.89-SNAPSHOT</version>
+  <version>4.1.68-SNAPSHOT</version>
 
   <properties>
     <basepom.check.skip-dependency>true</basepom.check.skip-dependency>
-    <hubspot.netty41.version>4.1.89.Final</hubspot.netty41.version>
+    <hubspot.netty41.version>4.1.68.Final</hubspot.netty41.version>
     <hubspot.pom.path>${project.build.directory}/${project.artifactId}-${project.version}.pom</hubspot.pom.path>
   </properties>
 
