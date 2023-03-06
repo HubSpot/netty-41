@@ -64,11 +64,6 @@
               <dependencyReducedPomLocation>${hubspot.pom.path}</dependencyReducedPomLocation>
               <useBaseVersion>true</useBaseVersion>
               <shadedArtifactAttached>true</shadedArtifactAttached>
-              <artifactSet>
-                <includes>
-                  <include>io.netty:netty-all</include>
-                </includes>
-              </artifactSet>
               <filters>
                 <filter>
                   <artifact>*:*</artifact>
