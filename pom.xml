@@ -66,7 +66,7 @@
               <shadedArtifactAttached>true</shadedArtifactAttached>
               <artifactSet>
                 <includes>
-                  <include>io.netty:netty-all</include>
+                  <include>*:*</include>
                 </includes>
               </artifactSet>
               <filters>
