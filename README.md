@@ -10,7 +10,7 @@ Maven:
     <dependency>
       <groupId>com.hubspot</groupId>
       <artifactId>netty-all-41</artifactId>
-      <version>4.1.89-SNAPSHOT</version>
+      <version>4.1.108-SNAPSHOT</version>
       <classifier>shaded</classifier>
     </dependency>
 ```
