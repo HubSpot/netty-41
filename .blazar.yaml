@@ -1,0 +1,5 @@
+
+before:
+  - description: Use QA nexus
+    commands:
+      - sed -i 's/hubteam.com/hubteamqa.com/g' ~/.m2/settings.xml
