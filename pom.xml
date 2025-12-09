@@ -13,8 +13,8 @@
 
   <properties>
     <project.build.targetJdk>11</project.build.targetJdk>
-
     <basepom.check.skip-dependency>true</basepom.check.skip-dependency>
+
     <hubspot.netty41.version>4.2.7.Final</hubspot.netty41.version>
     <hubspot.pom.path>${project.build.directory}/${project.artifactId}-${project.version}.pom</hubspot.pom.path>
     <dep.netty.version>${hubspot.netty41.version}</dep.netty.version>
@@ -82,6 +82,11 @@
               <dependencyReducedPomLocation>${hubspot.pom.path}</dependencyReducedPomLocation>
               <useBaseVersion>true</useBaseVersion>
               <shadedArtifactAttached>true</shadedArtifactAttached>
+              <artifactSet>
+                <includes>
+                  <include>io.netty:*</include>
+                </includes>
+              </artifactSet>
               <filters>
                 <filter>
                   <artifact>*:*</artifact>
